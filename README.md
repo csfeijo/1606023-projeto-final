@@ -10,5 +10,12 @@ Projeto Final Turma 1606023
 * Criação de repositório
 * Limpeza de arquivos desnecessários do framwork CRA
 
-
+## AULA 02
+* Básico da Bootstrap
+* Como funcionam as classes da Bootstrap
+* Incluindo a Bootstrap no projeto
+* Criando um componente de Menu
+* Configurando as Rotas
+* Criando a Page da Home
+* Enunciado do Exercício
 
