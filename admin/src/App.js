@@ -10,6 +10,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import Menu from './components/Menu'
 import Home from './pages/Home'
+import Departamentos from './pages/Departamentos'
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
             <Route path='/'>
               <Route index element={<Home/>}/>
               <Route path='departamentos'>
-                <Route index element={<h1>Listagem de Departamentos</h1>}/>
+                <Route index element={<Departamentos/>}/>
                 <Route path='new' element={<h1>Cadastrar Departamento</h1>}/>
                 <Route path=':idDepartamento' element={<h1>Editar Departamento</h1>}/>
               </Route>
