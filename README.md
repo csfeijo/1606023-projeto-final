@@ -19,3 +19,18 @@ Projeto Final Turma 1606023
 * Criando a Page da Home
 * Enunciado do Exercício
 
+## AULA 03
+* Correção do exercício
+* Selector´s de colunas da Bootstrap
+* Helps de alinhamento
+* Axios no React
+* Caimos no problema de CORS da API (como resolver?)
+* Enunciado do Exercício
+
+## AULA 04
+* Correção do exercício
+* useState e useEffect
+* React prop-types
+* tratamento de erros e loading message na listagem
+* chamada de API externa de Vercel
+* HEADERS com Authorization Bearer Token
