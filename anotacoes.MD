@@ -11,14 +11,3 @@ Ex.:
 
 Dica:
 Github.com -> github.dev carrega no VSCOde remoto o repositorio selecionado
-
-Alguns outros frameoworks de UI:
-
-https://getbootstrap.com/
-https://tailwindui.com/components
-https://materializecss.com/
-https://dribbble.com/
-
-## AULA 02
-https://getbootstrap.com/
-https://react-bootstrap.github.io/

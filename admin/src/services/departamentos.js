@@ -6,4 +6,10 @@ const getDepartamentos = async () => {
   return resp
 }
 
+export const insertDepartamento = async ({ nome, sigla }) => {
+  const resp = await api.post('/departamentos', { nome, sigla })
+
+  return resp
+}
+
 export default getDepartamentos

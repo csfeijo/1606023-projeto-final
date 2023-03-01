@@ -34,3 +34,32 @@ Projeto Final Turma 1606023
 * tratamento de erros e loading message na listagem
 * chamada de API externa de Vercel
 * HEADERS com Authorization Bearer Token
+
+## AULA 05
+* Cadastro de Departamentos
+  * UI
+  * Validação
+  * Chamada de API
+* API usando o ChatGPT 
+  * [Projeto no GitHub](https://github.com/csfeijo/chatgpt-sample-script)
+  * [Rodando na Vercel](https://chatgpt-sample-script.vercel.app/)
+
+
+
+---
+## Links úteis
+Frameworks de UI estilo Bootstrap:
+
+* [Bootstrap](https://getbootstrap.com/)
+* [Tailwind](https://tailwindui.com/components)
+* [MaterializeCSS](https://materializecss.com/)
+* [Shoelace UI](https://shoelace.style/frameworks/react)
+
+UI Inspirations:
+* [Dribble](https://dribbble.com/)
+* [Logopond](https://logopond.com)
+* [Icons FontAwesome](https://fontawesome.com/)
+
+React Libs:
+* [React Hook Forms - Validação](https://react-hook-form.com/)
+* [React Bootstrap Components](https://react-bootstrap.github.io/)
