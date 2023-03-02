@@ -12,4 +12,10 @@ export const insertDepartamento = async ({ nome, sigla }) => {
   return resp
 }
 
+export const deleteDepartamento = async ({ idDepartamento }) => {
+  const resp = await api.delete(`/departamento/${idDepartamento}`)
+
+  return resp
+}
+
 export default getDepartamentos

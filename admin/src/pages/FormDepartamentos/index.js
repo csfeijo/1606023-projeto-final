@@ -16,7 +16,7 @@ const FormDepartamentos = () => {
 
   const [msg, setMsg] = useState('')
 
-  const validaForm = () => {
+  const validaForm = async () => {
     // Começa resetando tudo
     setNomeErro('')
     setSiglaErro('')
@@ -44,12 +44,21 @@ const FormDepartamentos = () => {
     }
 
     // Vamos chamar a API
-    insertDepartamento({
-      nome,
-      sigla
-    })
-    navigate('/departamentos')
-
+    try {
+      await insertDepartamento({
+        nome,
+        sigla
+      })
+      navigate('/departamentos')
+    } catch (e) {
+      if (e.response.data.code === 'ER_DUP_ENTRY') {
+        // Registro duplicado
+        setMsg('Departamento já existe!')
+      } else {
+        // Erro generico
+        setMsg('Erro interno, tente novamente!')
+      }
+    }
   }  
 
   return (

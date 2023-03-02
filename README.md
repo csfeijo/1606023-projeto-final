@@ -44,7 +44,11 @@ Projeto Final Turma 1606023
   * [Projeto no GitHub](https://github.com/csfeijo/chatgpt-sample-script)
   * [Rodando na Vercel](https://chatgpt-sample-script.vercel.app/)
 
-
+## AULA 06
+* Exclusão de registro
+* Validações de mensagens de erro
+* Fix de erro na API
+* Enunciado do último exercício
 
 ---
 ## Links úteis
@@ -63,3 +67,9 @@ UI Inspirations:
 React Libs:
 * [React Hook Forms - Validação](https://react-hook-form.com/)
 * [React Bootstrap Components](https://react-bootstrap.github.io/)
+
+Bootcamps:
+* [Santander](https://ada.tech/sou-aluno/programas/santander-coders-2023)
+* Itau
+* XP Investimentos
+
