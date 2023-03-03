@@ -26,7 +26,7 @@ const App = () => {
               <Route path='departamentos'>
                 <Route index element={<Departamentos/>}/>
                 <Route path='new' element={<FormDepartamentos/>}/>
-                <Route path=':idDepartamento' element={<h1>Editar Departamento</h1>}/>
+                <Route path=':idDepartamento' element={<FormDepartamentos/>}/>
               </Route>
             </Route>
           </Routes>      

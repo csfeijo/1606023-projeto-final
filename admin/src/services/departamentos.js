@@ -18,4 +18,16 @@ export const deleteDepartamento = async ({ idDepartamento }) => {
   return resp
 }
 
+export const getDepartamento = async ({ idDepartamento }) => {
+  const resp = await api.get(`/departamentos/${idDepartamento}`)
+
+  return resp
+}
+
+export const updateDepartamento = async ({ idDepartamento, nome, sigla }) => {
+  const resp = await api.put(`/departamento/${idDepartamento}`, { nome, sigla })
+
+  return resp
+}
+
 export default getDepartamentos

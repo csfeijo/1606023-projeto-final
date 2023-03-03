@@ -1,11 +1,12 @@
-import React, { useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { insertDepartamento } from '../../services/departamentos'
+import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import { getDepartamento, insertDepartamento, updateDepartamento } from '../../services/departamentos'
 
 const FormDepartamentos = () => {
-
   const navigate = useNavigate()
 
+  const { idDepartamento } = useParams()
+  
   const inputNomeElem = useRef(null)
   const [nome, setNome] = useState('')
   const [nomeErro, setNomeErro] = useState('')
@@ -45,11 +46,20 @@ const FormDepartamentos = () => {
 
     // Vamos chamar a API
     try {
-      await insertDepartamento({
-        nome,
-        sigla
-      })
-      navigate('/departamentos')
+      if (!idDepartamento) {
+        await insertDepartamento({
+          nome,
+          sigla
+        })
+        navigate('/departamentos')
+      } else {
+        await updateDepartamento({
+          idDepartamento,
+          nome,
+          sigla
+        })
+        navigate('/departamentos')
+      }      
     } catch (e) {
       if (e.response.data.code === 'ER_DUP_ENTRY') {
         // Registro duplicado
@@ -59,13 +69,24 @@ const FormDepartamentos = () => {
         setMsg('Erro interno, tente novamente!')
       }
     }
-  }  
+  }
+
+  const loadDepartamento = async () => {
+    const resp = await getDepartamento({ idDepartamento })
+    setNome(resp.data[0].nome)
+    setSigla(resp.data[0].sigla)
+  }
+  useEffect(() => {
+    if (idDepartamento) {
+      loadDepartamento()
+    }
+  },[])
 
   return (
     <>
       <div className="row">
         <div className="col">
-          <h3>Cadastro de Departamento</h3>
+          <h3>{idDepartamento ? 'Edição' : 'Cadastro'} de Departamento</h3>
         </div>
       </div>
 
@@ -101,10 +122,10 @@ const FormDepartamentos = () => {
         <div className="col-3">
           <button
             type="button"
-            className="btn btn-primary"
+            className={`btn btn-${idDepartamento ? 'success' : 'primary'}`}
             onClick={validaForm}
           >
-            <i className="bi bi-save"/> Salvar
+            <i className="bi bi-save"/> {idDepartamento ? 'Editar' : 'Salvar'}
           </button>
         </div>
       </div>

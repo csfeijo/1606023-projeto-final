@@ -10,9 +10,9 @@ const Row = ({ depto, callback, callbackErro, callbackSucesso }) => {
       <td>{depto.nome}</td>
       <td>{depto.sigla}</td>
       <td>
-        <button type="button" className="btn btn-outline-warning me-3">
+        <Link to={`/departamentos/${depto.id_departamento}`} className="btn btn-outline-warning me-3">
           <i className="bi bi-pencil"/> Editar
-        </button>
+        </Link>
         <button 
           type="button" 
           className="btn btn-outline-danger"
