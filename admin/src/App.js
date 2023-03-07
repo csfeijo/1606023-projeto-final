@@ -26,7 +26,12 @@ const App = () => {
               <Route path='departamentos'>
                 <Route index element={<Departamentos/>}/>
                 <Route path='new' element={<FormDepartamentos/>}/>
-                <Route path=':idDepartamento' element={<h1>Editar Departamento</h1>}/>
+                {/* 
+                Ex. ao acessar:
+                /departamentos/33 => carregar o componente de dentro da prop. elem e transformar
+                o numero 33 em uma variavel chamada idDepartamento.                
+                */}
+                <Route path=':idDepartamento' element={<FormDepartamentos/>}/>
               </Route>
             </Route>
           </Routes>      
